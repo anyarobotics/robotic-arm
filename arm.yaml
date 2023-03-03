@@ -1,0 +1,43 @@
+# robot:
+#   base_c:
+#     type: "position_controllers/JointPositionController"
+#     joints: 
+#       -base
+#       -revo
+#       -revo2
+#       -grip_0
+#       -grip_01
+#       -grip_r
+#       -grip_l
+    
+    
+# myrobot:
+#   joint_c:
+#     type: "position_controllers/JointPositionController"
+#     joints: [sbase,revo,revo1,revo2,revo3]
+base_c:
+  type: "position_controllers/JointPositionController"
+  joint: base
+revo_c:
+  type: "position_controllers/JointPositionController"
+  joint: revo
+
+revo2_c:
+  type: "position_controllers/JointPositionController"
+  joint: revo2
+
+grip_0_c:
+  type: "position_controllers/JointPositionController"
+  joint: grip_0
+
+grip_01_c:
+  type: "position_controllers/JointPositionController"
+  joint: grip_01
+
+grip_r_c:
+  type: "position_controllers/JointPositionController"
+  joint: grip_r
+
+grip_l_c:
+  type: "position_controllers/JointPositionController"
+  joint: grip_l

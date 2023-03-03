@@ -1,0 +1,29 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"p_0" [label="p_0"];
+"p_1" [label="p_1"];
+"p_2" [label="p_2"];
+"p_3" [label="p_3"];
+"g_0" [label="g_0"];
+"g_01" [label="g_01"];
+"g_l" [label="g_l"];
+"g_r" [label="g_r"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "p_0"
+"p_0" -> "base" [label="xyz: 0 0 0.5 \nrpy: 0 -0 0"]
+"base" -> "p_1"
+"p_1" -> "revo" [label="xyz: 0 0.125 0.8 \nrpy: 0 -0 0"]
+"revo" -> "p_2"
+"p_2" -> "revo2" [label="xyz: 0 0 0.8 \nrpy: 0 -0 0"]
+"revo2" -> "p_3"
+"p_3" -> "grip_0" [label="xyz: 0 -0.125 1 \nrpy: 0 -0 0"]
+"grip_0" -> "g_0"
+"g_0" -> "grip_01" [label="xyz: 0 0 0.25 \nrpy: 0 -0 0"]
+"grip_01" -> "g_01"
+"g_01" -> "grip_l" [label="xyz: 0 0.075 0.2 \nrpy: 0 -0 0"]
+"grip_l" -> "g_l"
+"g_01" -> "grip_r" [label="xyz: 0 -0.075 0.2 \nrpy: 0 -0 0"]
+"grip_r" -> "g_r"
+}
